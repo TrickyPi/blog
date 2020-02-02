@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
-import Tab from '../components/Tab'
+import './LeftSlide.css'
+import SlideSwitch from '../components/SlideSwitch'
 import userImg from '../assets/imgs/user.jpg'
-export default class Left extends Component {
+export default class LeftSlide extends Component {
     state={
         artcileList:[
             {
                 id:1,
-                num:12,
-                name:'日志'
+                num:20,
+                name:'诗歌'
             },
             {
                 id:2,
@@ -19,6 +20,18 @@ export default class Left extends Component {
                 num:32,
                 name:'标签'
             }
+        ],
+        contact:[
+            {
+                id:1,
+                img:require('../assets/imgs/github.png'),
+                text:'github'
+            },
+            {
+                id:2,
+                img:require('../assets/imgs/twitter.png'),
+                text:'twitter'
+            }
         ]
     }
     render() {
@@ -27,7 +40,7 @@ export default class Left extends Component {
                 <div style={tipstyle}>
                     Control Yourself
                 </div>
-                <Tab tabList={this.props.tabList} cstClick={this.props.cstClick.bind(this)}></Tab>
+                <SlideSwitch></SlideSwitch>
                 <div className="person">
                     <img src={userImg} alt="" style={{width:'126px',height:'126px',margin:'20px 0px 10px'}} />
                     <div className="personName">TrickyPi</div>
@@ -43,6 +56,15 @@ export default class Left extends Component {
                             )
                         }
                     </div>
+                </div>
+                <div className="contact">
+                    {
+                        this.state.contact.map(
+                            item=>(
+                                <img src={item.img} key={item.id} style={{width:'24px'}} alt='icon'></img>
+                            )
+                        )
+                    }
                 </div>
             </div>
         )

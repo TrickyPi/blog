@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-export default class TabItem extends Component {
+export default class SlideSwitchItem extends Component {
     chnageBackgroundColor(showColor) {
         let newlistyle = {}
         if (showColor) {

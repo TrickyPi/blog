@@ -1,0 +1,10 @@
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact>img:nth-child(2){
+    margin-left: 20px;
+}

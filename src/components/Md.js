@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactMarkdown from 'react-markdown'
-import CodeBlock from '../components/CodeBlock'
+import MdCodeBlock from './MdCodeBlock'
 
 
 export default class Md extends Component {
@@ -12,7 +12,7 @@ export default class Md extends Component {
                     source={this.props.fetchMd.markdom}
                     escapeHtml={false}
                     renderers={{
-                        code: CodeBlock
+                        code: MdCodeBlock
                     }}
                 >
                 </ReactMarkdown>

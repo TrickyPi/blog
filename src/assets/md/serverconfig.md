@@ -1,7 +1,7 @@
-# ssh配置和ssh操作
+## ssh配置和ssh操作
 *trickyPi* 2019-11-21
 
-## mac的ssh配置（轻量服务器）
+### mac的ssh配置（轻量服务器）
 
 备注：假设私钥名称为xxx.pem
 

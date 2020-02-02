@@ -1,23 +1,23 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import Md from '../components/Md'
-import LookOther from '../components/LookOther'
+import MdSwtich from '../components/MdSwitch'
 
 const mdArr = [
     {
         id: 1,
-        title: "koa",
-        data: require('../assets/md/koa.md'),
+        title: "vue.nextTick",
+        data: require('../assets/md/nextTick.md'),
         markdom: ""
     },
     {
         id: 2,
-        title: "serverconfig",
+        title: "服务器配置",
         data: require('../assets/md/serverconfig.md'),
         markdom: ""
     },
     {
         id: 3,
-        title: 'sharp',
+        title: 'sharp应用',
         data: require('../assets/md/sharp.md'),
         markdom: ""
     }
@@ -53,7 +53,7 @@ export default class Right extends Component {
                 if (i === 0) {
                     virtualAdjacent = [
                         {
-                            title: '前面是悬崖'
+                            title: '到顶了'
                         },
                         mdArr[i + 1]
                     ]
@@ -61,7 +61,7 @@ export default class Right extends Component {
                     virtualAdjacent = [
                         mdArr[i - 1],
                         {
-                            title: '后面是悬崖'
+                            title: '到底了'
                         }
                     ]
                 } else {
@@ -91,20 +91,13 @@ export default class Right extends Component {
     render() {
         const { fetchMd, adjacent } = this.state
         return (
-            <div style={rightStyle}>
+            <Fragment>
                 <Md fetchMd={fetchMd}></Md>
-                <LookOther
+                <MdSwtich
                     OtherPages={adjacent}
-                    changAirtcle={this.changAirtcle.bind(this)}></LookOther>
-            </div>
+                    changAirtcle={this.changAirtcle.bind(this)}></MdSwtich>
+            </Fragment>
         )
     }
 }
 
-const rightStyle = {
-    width: '750px',
-    minHeight: '100%',
-    margin: '0 0 0 220px',
-    textAlign: 'left',
-    padding: '0px 0px 40px 0px',
-}

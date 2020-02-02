@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
-class CodeBlock extends PureComponent {
+class MdCodeBlock extends PureComponent {
   static propTypes = {
     value: PropTypes.string.isRequired,
     language: PropTypes.string
@@ -23,4 +23,4 @@ class CodeBlock extends PureComponent {
   }
 }
 
-export default CodeBlock;
+export default MdCodeBlock;
