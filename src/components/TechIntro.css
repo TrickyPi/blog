@@ -1,0 +1,30 @@
+.tech-con{
+    width: 680px;
+    margin: 0px auto 50px;
+    padding: 10px 10px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 12px 4px #eee;
+}
+.tech-title{
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.tech-time{
+    font-size: 12px;
+    line-height: 18px;
+    margin: 4px 0px 2px;
+}
+.tech-intro-con{
+    margin: 0px 30px 10px;
+    text-indent: 2em;
+    line-height: 24px;
+    font-size: 14px;
+    text-align: justify;
+}
+.tech-read-more{
+    margin-left: 30px;
+    font-size: 12px;
+    color: skyblue;
+    text-align: left;
+}

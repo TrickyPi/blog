@@ -14,3 +14,28 @@ html,body{
 .hoverTab:hover{
   color: #1b4894 !important;
 }
+.right-st{
+  position: relative;
+  box-sizing: border-box;
+  width: 750px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0 0 0 220px;
+  text-align: left;
+  padding: 0px 0px 30px 0px;
+}
+.right-st::-webkit-scrollbar{ 
+  width:6px;
+  height:100%;
+}
+.right-st::-webkit-scrollbar-thumb{
+  width:4px;
+  height:60px;
+  background-color:rgba(255,255,255,0);
+  border-radius:3px;
+}
+.right-st::-webkit-scrollbar-track { 
+  border-radius: 10px; 
+  background-color: rgba(255,255,255,0);
+}

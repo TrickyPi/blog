@@ -21,13 +21,13 @@ export default class Welcome extends Component {
     }
 }
 
-const welcomeCon ={
+const welcomeCon = {
     position: 'relative',
-    display:'block',
-    width:'100%',
-    height:"100vh",
+    display: 'block',
+    width: '100%',
+    height: "100vh",
     backgroundSize: 'cover',
-    backgroundPosition:'center center'
+    backgroundPosition: 'center center'
 }
 const topicStyle = {
     position: 'absolute',
@@ -35,15 +35,15 @@ const topicStyle = {
     top: '50%',
     cursor: 'pointer',
     transform: 'translate(-50%,-50%)',
-    color: '#333', 
+    color: '#333',
     fontSize: '40px',
 }
 
-const linkStyle = { 
+const linkStyle = {
     display: 'block',
     marginTop: '20px',
     textDecoration: 'none',
-    textAlign:'center',
-    color: '#333', 
+    textAlign: 'center',
+    color: '#333',
     fontSize: '40px',
 }

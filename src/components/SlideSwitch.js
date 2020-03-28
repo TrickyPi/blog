@@ -16,7 +16,7 @@ export default class SlideSwitch extends Component {
                 icon: require('../assets/imgs/all.png'),
                 text: '技术摘要',
                 showColor: false,
-                route: '/tech'
+                route: '/techCon'
             },
             {
                 id: 3,
@@ -43,12 +43,12 @@ export default class SlideSwitch extends Component {
     }
     componentDidMount() {
         console.log(window.location.pathname)
-        this.setState((state)=>{
-            return{
-                tabList:state.tabList.map(item=>{
-                    if(window.location.pathname.includes(item.route)){
+        this.setState((state) => {
+            return {
+                tabList: state.tabList.map(item => {
+                    if (window.location.pathname.includes(item.route)) {
                         item.showColor = true
-                    }else{
+                    } else {
                         item.showColor = false
                     }
                     return item
@@ -76,7 +76,10 @@ export default class SlideSwitch extends Component {
             <ul style={ulstyle}>
                 {
                     renderData.map((item, index) =>
-                        <SlideSwitchItem tabInfo={item} key={index} cstClick={this.cstClick.bind(this)}></SlideSwitchItem>
+                        <SlideSwitchItem
+                            tabInfo={item}
+                            key={index}
+                            cstClick={this.cstClick.bind(this)}></SlideSwitchItem>
                     )
                 }
             </ul>

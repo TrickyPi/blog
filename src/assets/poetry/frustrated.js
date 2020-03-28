@@ -1,6 +1,7 @@
+import uuidv4 from 'uuid'
 export const frustrated = [
     {
-        id: 1,
+        id: uuidv4(),
         article: '《歌与哭》',
         author: "海子",
         portion: [
@@ -10,7 +11,7 @@ export const frustrated = [
         ]
     },
     {
-        id: 2,
+        id: uuidv4(),
         article: '《波兰来客》',
         author: "北岛",
         portion: [
@@ -23,7 +24,7 @@ export const frustrated = [
         ]
     },
     {
-        id: 3,
+        id: uuidv4(),
         article: '《避免》',
         author: "顾城",
         portion: [
@@ -35,7 +36,7 @@ export const frustrated = [
         ]
     },
     {
-        id: 4,
+        id: uuidv4(),
         article: '',
         author: "张嘉佳",
         portion: [
@@ -44,7 +45,7 @@ export const frustrated = [
         ]
     },
     {
-        id: 5,
+        id: uuidv4(),
         article: '白日梦',
         author: "北岛",
         portion: [

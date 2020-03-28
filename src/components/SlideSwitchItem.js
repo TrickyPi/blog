@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 export default class SlideSwitchItem extends Component {
-    chnageBackgroundColor(showColor) {
+    changeBackgroundColor(showColor) {
         let newlistyle = {}
         if (showColor) {
             newlistyle = Object.assign({}, listyle, {
@@ -18,9 +18,9 @@ export default class SlideSwitchItem extends Component {
             <Link
                 rel="stylesheet"
                 onClick={this.props.cstClick.bind(this, id)} 
-                style={{textDecoration: 'none',color:'#333'}}
+                style={{textDecoration: 'none'}}
                 to={'/look'+route}>
-                <li style={this.chnageBackgroundColor(showColor)}>
+                <li style={this.changeBackgroundColor(showColor)}>
                     <img style={imgstyle} src={icon} alt="" />
                     <span style={spanstyle}>{text}</span>
                 </li>

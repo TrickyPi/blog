@@ -1,29 +1,9 @@
 import React, { Component, Fragment } from 'react'
 import Md from '../components/Md'
 import MdSwtich from '../components/MdSwitch'
+import {mdArr} from '../assets/md'
 
-const mdArr = [
-    {
-        id: 1,
-        title: "vue.nextTick",
-        data: require('../assets/md/nextTick.md'),
-        markdom: ""
-    },
-    {
-        id: 2,
-        title: "服务器配置",
-        data: require('../assets/md/serverconfig.md'),
-        markdom: ""
-    },
-    {
-        id: 3,
-        title: 'sharp应用',
-        data: require('../assets/md/sharp.md'),
-        markdom: ""
-    }
-]
-
-export default class Right extends Component {
+export default class Tech extends Component {
     state = {
         adjacent: [],
         fetchMd: {},
@@ -35,7 +15,7 @@ export default class Right extends Component {
                 .then(text => {
                     resolve(text)
                 })
-                .catch(err=>{
+                .catch(err => {
                     reject(err)
                 })
         })
@@ -77,15 +57,15 @@ export default class Right extends Component {
         })
     }
     componentWillMount() {
-        const promisArr =mdArr.map(item => 
+        const id = this.props.match.params.id || 1
+        const promisArr = mdArr.map(item =>
             this.fetch(item.data)
         )
-        Promise.all(promisArr).then(res=>{
-            mdArr.forEach((item,index)=>{
+        Promise.all(promisArr).then(res => {
+            mdArr.forEach((item, index) => {
                 item.markdom = res[index]
             })
-            console.log(mdArr)
-            this.changAirtcle(1)
+            this.changAirtcle(Number(id))
         })
     }
     render() {

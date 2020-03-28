@@ -6,6 +6,7 @@ import Home from './layout/Home'
 import Tech from './layout/Tech'
 import Poetry from './layout/Poetry'
 import Tag from './layout/Tag'
+import TechCon from './layout/TechCon'
 import Place from './layout/Place'
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
@@ -20,13 +21,18 @@ class App extends React.Component {
           <Route path='/look'>
             <div className="article-con">
               <LeftSlide></LeftSlide>
-              <div style={rightStyle}>
+              <div className='right-st'>
                 <Switch>
                   <Route path='/look/home'>
                     <Home></Home>
                   </Route>
-                  <Route path='/look/tech'>
-                    <Tech></Tech>
+                  <Route path='/look/techCon'>
+                    <Switch>
+                      <Route path='/look/techCon/tech/:id' component={Tech}>
+                      </Route>
+                      <Route path='' component={TechCon}>
+                      </Route>
+                    </Switch>
                   </Route>
                   <Route path='/look/poetry'>
                     <Poetry></Poetry>
@@ -48,15 +54,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-const rightStyle = {
-  position:"relative",
-  boxSizing: 'border-box',
-  width: '750px',
-  height: '100%',
-  overflowX: 'hidden',
-  overflowY: 'auto',
-  margin: '0 0 0 220px',
-  textAlign: 'left',
-  padding: '0px 0px 30px 0px',
-}

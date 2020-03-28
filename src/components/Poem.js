@@ -19,9 +19,7 @@ export default class Poem extends Component {
                         )
                     }
                 </div>
-                <div className="author">
-                    --&nbsp;{author}
-                </div>
+                {author ? <div className="author">--&nbsp;{author}</div> : ''}
             </div>
         )
     }
