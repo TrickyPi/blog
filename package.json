@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "markdown-it": "^10.0.0",
+    "markdown-it": "^12.3.2",
     "minimist": "^1.2.5",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
